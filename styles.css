@@ -2063,7 +2063,7 @@ ul {
 }
 
 .btn-figma-green {
-    background: #a3ff12;
+    background: #A3E635;
     border: none;
     padding: 15px 35px;
     border-radius: 10px;
@@ -2071,7 +2071,7 @@ ul {
     font-size: 15px;
     color: #1a202c;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(163, 255, 18, 0.35);
+    box-shadow: 0 8px 20px rgba(163, 230, 53, 0.35);
     transition: transform 0.2s ease;
 }
 
