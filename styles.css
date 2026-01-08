@@ -2309,12 +2309,18 @@ ul {
 
 @media (max-width: 768px) {
     .floating-cta {
-        bottom: 0;
-        left: 0;
-        transform: none;
-        width: 100%;
-        max-width: 100%;
-        border-radius: 20px 20px 0 0;
+        bottom: 20px;
+        /* Floating above bottom */
+        left: 50%;
+        /* Center horizontally */
+        transform: translateX(-50%);
+        /* Center perfectly */
+        width: 95%;
+        /* Small margin on sides */
+        max-width: 400px;
+        /* Limit width */
+        border-radius: 24px;
+        /* Full rounded corners */
         padding: 12px;
     }
 
