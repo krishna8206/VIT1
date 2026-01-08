@@ -2062,6 +2062,13 @@ ul {
     margin-top: 50px;
 }
 
+@media (max-width: 768px) {
+    .cta-container {
+        margin-bottom: 40px;
+        /* User requested spacing */
+    }
+}
+
 .btn-figma-green {
     background: #A3E635;
     border: none;
