@@ -2328,6 +2328,11 @@ ul {
     .floating-badges {
         margin-top: 12px;
     }
+
+    .floating-text {
+        white-space: normal;
+        /* Allow text to wrap on mobile */
+    }
 }
 
 .hero-section {
