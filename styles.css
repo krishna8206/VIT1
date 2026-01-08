@@ -1985,8 +1985,8 @@ ul {
 
 @media (max-width: 768px) {
     .integrations-section {
-        padding-bottom: 160px;
-        /* Increased space for floating bubble */
+        padding-bottom: 250px;
+        /* Aggressively increased space to prevent overlap */
     }
 }
 
@@ -2107,15 +2107,13 @@ ul {
 
 @media (max-width: 768px) {
     .purple-bubble-wrapper {
-        top: -60px;
-        /* Adjusted top for mobile */
+        top: -30px;
+        /* Push down further closer to its own section, away from button */
         right: 10px;
-        /* Adjusted right for mobile */
     }
 
     .purple-bubble-img {
         width: 80px;
-        /* Smaller size on mobile */
     }
 }
 
