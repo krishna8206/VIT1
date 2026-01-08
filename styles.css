@@ -2199,20 +2199,19 @@ ul {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    background: #FFF0F5;
-    /* Light Pink Background */
-    padding: 1.5rem 3rem;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    /* Outer Card White */
+    padding: 12px;
+    /* Small padding to create the white frame */
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     z-index: 1000;
     width: auto;
     max-width: 95%;
     display: none;
-    /* Initially hidden, JS or explicit class can show it */
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    border: 1px solid #FFE4E6;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .floating-cta.show {
@@ -2233,16 +2232,25 @@ ul {
 }
 
 .floating-content {
+    background: #FFF0F5;
+    /* Inner Bar Pink */
+    width: 100%;
+    border-radius: 16px;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    /* Force single line on desktop */
+    justify-content: space-between;
+    /* Spread content */
 }
 
 .avatar-group {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    /* Prevent group from shrinking */
 }
 
 .avatar-sm {
@@ -2251,6 +2259,10 @@ ul {
     border-radius: 50%;
     border: 2px solid white;
     margin-left: -10px;
+    flex-shrink: 0;
+    /* Prevent individual avatars from shrinking */
+    object-fit: cover;
+    /* Ensure image covers the circle */
 }
 
 .avatar-sm:first-child {
@@ -2261,6 +2273,8 @@ ul {
     font-weight: 700;
     color: #1E293B;
     font-size: 1.1rem;
+    white-space: nowrap;
+    /* Force text to stay on one line */
 }
 
 .btn-floating-action {
@@ -2271,11 +2285,13 @@ ul {
 .floating-badges {
     display: flex;
     gap: 2rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #64748B;
-    margin-top: 0.5rem;
+    margin-top: 10px;
+    padding-bottom: 5px;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .badge-item {
@@ -2283,6 +2299,12 @@ ul {
     align-items: center;
     gap: 0.5rem;
     font-weight: 500;
+}
+
+.badge-icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 @media (max-width: 768px) {
@@ -2293,13 +2315,18 @@ ul {
         width: 100%;
         max-width: 100%;
         border-radius: 20px 20px 0 0;
-        padding: 1.5rem;
+        padding: 12px;
     }
 
     .floating-content {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .floating-badges {
+        margin-top: 12px;
     }
 }
 
