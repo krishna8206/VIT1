@@ -847,7 +847,10 @@ ul {
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    /* Changed from nowrap to wrap */
+    row-gap: 0.5rem;
+    /* Ensure vertical spacing when wrapped */
 }
 
 .title-with-badge .card-title {
@@ -1162,6 +1165,8 @@ ul {
     /* Allow sphere to extend beyond section */
     padding: 80px 0;
     background: #EAEFFA;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from sphere */
 }
 
 /* Purple Sphere Decoration */
@@ -2086,6 +2091,20 @@ ul {
     right: 0px;
     /* Margin from right edge */
     z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .purple-bubble-wrapper {
+        top: -60px;
+        /* Adjusted top for mobile */
+        right: 10px;
+        /* Adjusted right for mobile */
+    }
+
+    .purple-bubble-img {
+        width: 80px;
+        /* Smaller size on mobile */
+    }
 }
 
 .purple-bubble-img {
